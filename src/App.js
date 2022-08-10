@@ -1,24 +1,42 @@
-import logo from './logo.svg';
+import { Fade, Rotate, Zoom } from 'react-reveal';
 import './App.css';
+import About from './Components/About';
+import Banner from './Components/Banner';
+import Counter from './Components/Counter';
+import ExploreFood from './Components/ExploreFood';
+import Faq from './Components/Faq';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import Newsletter from './Components/Newsletter';
+import StoryMenu from './Components/StoryMenu';
+import Testimonial from './Components/Testimonial';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <Fade left>
+    <Banner />
+    </Fade>
+    <Zoom>
+    <Counter />
+    </Zoom>
+    <About />
+    <StoryMenu />
+    <Fade left>
+    <ExploreFood />
+    </Fade>
+    <Zoom>
+    <Testimonial />
+    </Zoom>
+    <Faq />
+    <Zoom>
+    <Newsletter />
+    </Zoom>
+    <Footer />
+    
+    </>
   );
 }
 
